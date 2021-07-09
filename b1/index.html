@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>moon parallax</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">logo</a>
+        <ul>
+            <li><a href="#" class="active">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">work</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="asset/stars.png" id="stars"> 
+        <img src="asset/moon.png" id="moon"> 
+        <img src="asset/backmountain.png" id="backmountain">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn" >Explore</a>
+        <img src="asset/front mountain.png" id="mountainfront">
+    </section>
+    <div class="sec" id="sec">
+        <h2 align="center">Hello Wiki Jerry</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, vel minima voluptatem adipisci aut
+             voluptas omnis laboriosam, quis aspernatur nulla nisi delectus quo animi? Quaerat eius ipsam voluptate 
+             velit error!Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, vel minima voluptatem adipisci aut
+             voluptas omnis laboriosam, quis aspernatur<br><br> nulla nisi delectus quo animi? Quaerat eius ipsam voluptate 
+             velit error!Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, vel minima voluptatem adipisci aut
+             voluptas omnis laboriosam, quis aspernatur nulla nisi delectus quo animi? Quaerat eius ipsam voluptate 
+             velit error!Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, vel minima voluptatem adipisci aut
+             voluptas omnis laboriosam, quis aspernatur nulla nisi delectus quo animi? Quaerat eius ipsam voluptate 
+             velit error!
+        </p>
+    </div>
+    <script>
+        let stars=document.getElementById('stars');
+        let moon=document.getElementById('moon');
+        let backmountain=document.getElementById('backmountain');
+        let text=document.getElementById('text');
+        let btn=document.getElementById('btn');
+        let mountainfront=document.getElementById('mountainfront');
+        let sec=document.getElementById('sec');
+        let header=document.querySelector('header');
+
+        window.addEventListener("scroll",function(){
+            let value= window.scrollY;
+            stars.style.left=value +'px';
+            moon.style.Top=value +'px';
+            backmountain.style.top=value +'px';
+            mountainfront.style.Top = value +'px';
+            text.style.marginBottom = value * 1.5 +'px';
+            text.style. marginBottom= value * 1.5 +'px';
+            btn.style.marginTop = value * 0.5 +'px';
+            header.style.Top=value* 4 +'px';
+
+        })
+
+    </script>
+</body>
+</html> 
